@@ -10,6 +10,6 @@ int main(void)
 
 	/**
 	 * returns 0 for main to end the program
-	*/
+ 	 */
         return (0);
 }
