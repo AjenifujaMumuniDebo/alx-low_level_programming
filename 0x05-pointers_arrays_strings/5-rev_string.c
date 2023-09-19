@@ -1,19 +1,25 @@
 #include "main.h"
-#include "2-strlen.c"
 /**
- * rev_string - reverse a string value
- *
- * @s: string to print
+ * rev_string - returns the length of a string.
+ * @s: array with the characters of the word
+ * Return: Always 0.
  */
 void rev_string(char *s)
 {
-	int i;
-	char t;
+	int len, i, half;
+	char temp;
 
-	for (i = 0; i < _strlen(s) / 2; i++)
+	for (len = 0; s[len] != '\0'; len++)
+	;
+	i = 0;
+
+	half = len / 2;
+
+	while (half--)
 	{
-		t = s[i];
-		s[i] = s[_strlen(s) - i - 1];
-		s[_strlen(s) - i - 1] = t;
+		temp = s[len - i - 1];
+		s[len - i - 1] = s[i];
+		s[i] = temp;
+		i++;
 	}
 }
