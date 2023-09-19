@@ -1,20 +1,22 @@
 #include "main.h"
-#include "2-strlen.c"
+
 /**
- * puts2 - puts string twice
- *
- * @str: string to put twice
+ * puts2 - to every other character of a string,starting from begin
+ * @str: pointer to char data type
+ * Return: void
  */
+
 void puts2(char *str)
 {
-	int i;
+	int len = 0;
 
-	for (i = 0; i < _strlen(str); i++)
+	while (str[len] != '\0')
 	{
-		if (i % 2 == 0)
+		if (len % 2 == 0)
 		{
-			_putchar(str[i]);
+			_putchar(str[len]);
 		}
+		len++;
 	}
 	_putchar('\n');
 }
